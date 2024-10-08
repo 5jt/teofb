@@ -58,6 +58,8 @@ The classic problem specifies the first hundred natural numbers. The solutions p
 
 ## To do
 
+- [x] draft ch1 code in DWS
+- [x] use Link: convert code to text
 - [ ] include Tester2
 - [ ] include ADoc
 - [ ] MkDocs instance in `docs/`
