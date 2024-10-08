@@ -55,3 +55,21 @@ The classic problem specifies the first hundred natural numbers. The solutions p
       13  14  efervescenciazumbido  16  17  efervesc
       encia  19  zumbido 
 ```
+
+## To do
+
+- [ ] include Tester2
+- [ ] include ADoc
+- [ ] MkDocs instance in `docs/`
+- [ ] configure Material for MkDocs
+- [ ] CI/CD through GH Pages
+- [ ] chapter 1
+- [ ] chapter 2
+- [ ] chapter 3
+- [ ] chapter 4
+- [ ] chapter 5
+- [ ] chapter 6
+- [ ] chapter 7
+- [ ] chapter 8
+- [ ] chapter 9
+- [ ] chapter 10
