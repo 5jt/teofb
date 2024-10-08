@@ -1,0 +1,56 @@
+site_name: 'Ten Essays on Fizz Buzz – in APL'
+
+docs_dir: source
+
+repo_url: https://github.com/5jt/teofb
+repo_name: 5jt/teofb
+nav:
+  - Introduction: index.md
+  - Chapter 1: chapter1.md
+  - Chapter 2: chapter2.md
+  - Chapter 3: chapter3.md
+  - Chapter 4: chapter4.md
+  - Chapter 5: chapter5.md
+  - Chapter 6: chapter6.md
+  - Chapter 7: chapter7.md
+  - Chapter 8: chapter8.md
+  - Chapter 9: chapter9.md
+  - Chapter 10: chapter10.md
+    
+theme:
+  favicon: 'img/favicon-32.png'
+  logo: 'img/apl-logo.png'
+  features:
+    - content.tabs.link
+    - navigation.sections
+    - navigation.instant
+  name: material
+
+# extra:
+#   version:
+#     provider: mike
+
+# extra_css:
+#   - style/main.css
+#   - style/admonition-ucmdhelp.css
+
+# plugins:
+#   - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
