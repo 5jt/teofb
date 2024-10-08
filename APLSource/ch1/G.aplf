@@ -1,0 +1,9 @@
+ G;tno
+⍝ with open('fizzbuzz.txt', 'w') as f:
+⍝     for fizz_buzz in FIZZ_BUZZ:
+⍝         f.write(f"{fizz_buzz}\n")
+
+⍝ Joel Grus. fizzbuzz (p. 16). Kindle Edition.
+ tno←'fizzbuzz.txt'⎕NCREATE 0
+ ((⎕UCS 13 10)#.u.join #.N↑#.FIZZBUZZ)⎕NAPPEND tno
+ ⎕NUNTIE tno

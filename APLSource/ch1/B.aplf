@@ -1,0 +1,4 @@
+ Z←B
+ Z←#.(N⍴FIZZBUZZ)
+
+⍝ Joel Grus. fizzbuzz (p. 14). Kindle Edition.

@@ -1,0 +1,6 @@
+ Z←C
+⍝ for fizz_buzz in FIZZ_BUZZ:
+⍝     print(fizz_buzz.upper())
+
+⍝ Joel Grus. fizzbuzz (p. 16). Kindle Edition.
+Z←1 ⎕C #.(N↑FIZZBUZZ)

@@ -1,0 +1,8 @@
+ Z←F
+⍝ Or if you wanted the output in Spanish: for fizz_buzz in FIZZ_BUZZ:
+⍝     print(fizz_buzz
+⍝           .replace("fizz", "efervescencia")
+⍝           .replace("buzz", "zumbido"))
+
+⍝ Joel Grus. fizzbuzz (p. 16). Kindle Edition.
+ Z←⊃#.u.replace/('fizz' 'efervescencia')('buzz' 'zumbido')('fizzbuzz' 'efervescenciazumbido')#.(N↑FIZZBUZZ)

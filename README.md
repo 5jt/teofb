@@ -38,3 +38,20 @@ The classic problem specifies the first hundred natural numbers. The solutions p
 2.  Launch Dyalog.
 
 3.  `]Link # ~/path/to/teofb`
+
+## Usage
+
+```apl
+      )CS ch1
+      A
+ 1  2  fizz  4  buzz  fizz  7  8  fizz  buzz  11  fiz
+      z  13  14  fizzbuzz  16  17  fizz  19  buzz 
+      E
+ 1  2  fzz  4  bzz  fzz  7  8  fzz  bzz  11  fzz  13  14
+        fzzbzz  16  17  fzz  19  bzz 
+      F
+ 1  2  efervescencia  4  zumbido  efervescencia  7  
+      8  efervescencia  zumbido  11  efervescencia  
+      13  14  efervescenciazumbido  16  17  efervesc
+      encia  19  zumbido 
+```
