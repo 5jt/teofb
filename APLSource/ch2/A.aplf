@@ -1,0 +1,15 @@
+ Z←A;i;r
+ ⍝ close translation of the canonical Python solution
+ Z←''
+ :For i :In ⍳#.N
+     :If 0=15|i
+         r←'fizzbuzz'
+     :ElseIf 0=3|i
+         r←'fizz'
+     :ElseIf 0=5|i
+         r←'buzz'
+     :Else
+         r←,⍕i
+     :EndIf
+     Z,←⊂r
+ :EndFor

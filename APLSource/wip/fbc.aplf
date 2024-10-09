@@ -1,0 +1,10 @@
+fbc←{
+	⍝ fizzbuzz cycle; e.g.
+    ⍝      3 5 fbc 'fizz' 'buzz'
+    ⍝┌┬┬────┬┬────┬────┬┬┬────┬────┬┬────┬┬┬────────┐
+    ⍝│││fizz││buzz│fizz│││fizz│buzz││fizz│││fizzbuzz│
+    ⍝└┴┴────┴┴────┴────┴┴┴────┴────┴┴────┴┴┴────────┘
+	cl←×/⍺             ⍝ cycle length
+	rs←↑cl⍴¨(-⍺)↑¨≢¨⍵  ⍝ replacement strings
+	,⌿rs⍴¨⍉(cl,≢⍵)⍴⍵   ⍝ combined
+}
