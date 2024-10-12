@@ -1,0 +1,4 @@
+ anagrams←{
+     ⍝ strings ⍺ and ⍵ are anagrams
+     ≡/asc¨⍺ ⍵
+ }

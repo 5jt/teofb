@@ -1,0 +1,11 @@
+ z←A∆ x
+ ⍝ close translation of the canonical Python solution
+ :If 0=15|x
+     z←'fizzbuzz'
+ :ElseIf 0=3|x
+     z←'fizz'
+ :ElseIf 0=5|x
+     z←'buzz'
+ :Else
+     z←,⍕x
+ :EndIf

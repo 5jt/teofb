@@ -1,10 +1,4 @@
  Z←B
  ⍝ The canonical Python solution with
  ⍝ * the For-loop replaced by Each
- ⍝ * The If/ElseIf/Else in d-fn form
- Z←{
-     0=15|⍵:'fizzbuzz'
-     0=3|⍵:'fizz'
-     0=5|⍵:'buzz'
-     ⍕⍵
- }¨⍳#.N
+ Z←B∆¨⍳#.N

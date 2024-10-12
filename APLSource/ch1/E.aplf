@@ -1,8 +1,0 @@
- Z←E
-⍝ Or if you needed to print the words without vowels (“Fzz Bzz”): import re
-
-⍝ for fizz_buzz in FIZZ_BUZZ:
-⍝     print(re.sub("[aeiouAEIOU]", "", fizz_buzz))
-
-⍝ Joel Grus. fizzbuzz (p. 16). Kindle Edition.
- Z←#.(N↑FIZZBUZZ)~¨⊂#.u.VOWELS

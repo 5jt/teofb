@@ -1,0 +1,4 @@
+ asc←{
+     ⍝ ⍵ in ascending order
+     ⍵[⍋⍵]
+ }

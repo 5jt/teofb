@@ -5,5 +5,5 @@
 
 ⍝ Joel Grus. fizzbuzz (p. 16). Kindle Edition.
  tno←'fizzbuzz.txt'⎕NCREATE 0
- ((⎕UCS 13 10)#.u.join #.N↑#.FIZZBUZZ)⎕NAPPEND tno
+ ((⎕UCS 13 10)#.u.join #.(N↑FIZZ_BUZZ)⎕NAPPEND tno
  ⎕NUNTIE tno

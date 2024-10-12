@@ -1,0 +1,32 @@
+ check_output output;i;errors
+⍝ def check_output(output: List[str]) -> None:
+⍝     assert len(output) == 100, "output should have length 100"
+
+⍝     # Collect all the errors in a list
+⍝     # The i+1 reflects that output[0] is the output for 1,
+⍝     # output[1] is the output for 2, and so on
+⍝     errors = [
+⍝         f"({i+1}) predicted: {output[i]}, actual: {FIZZ_BUZZ[i]}"
+⍝         for i in range(100)
+⍝         if output[i] != FIZZ_BUZZ[i]
+⍝     ]
+
+⍝     # And assert that the list of errors is empty
+⍝     assert not errors, f"{errors}"
+
+⍝ Joel Grus. fizzbuzz (p. 19). Kindle Edition.
+
+   assert =/≢¨output FIZZ_BUZZ
+
+⍝  errors←''
+⍝  :For i :In ⍳#.N
+⍝      :If output[i]≢#.FIZZ_BUZZ[i]
+⍝          errors,←⊂(⍕i),' predicted: ',(i⊃FIZZ_BUZZ),', actual: ',i⊃output
+⍝      :EndIf
+⍝  :EndFor
+
+⍝  assert 0=≢errors
+
+ i←⍸output≢¨FIZZ_BUZZ
+ errors←(⍕¨i),¨(⊂' predicted: '),¨FIZZ_BUZZ[i],¨(⊂', actual: '),¨output[i]
+ assert 0=≢i

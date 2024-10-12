@@ -1,7 +1,0 @@
- Z←D
-⍝ Or if you wanted the results to start at 100 and count down to 1:
-⍝ for fizz_buzz in reversed(FIZZ_BUZZ):
-⍝     print(fizz_buzz)
-
-⍝ Joel Grus. fizzbuzz (p. 16). Kindle Edition.
-Z←⌽#.(N↑FIZZBUZZ)
