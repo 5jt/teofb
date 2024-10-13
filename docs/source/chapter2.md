@@ -344,7 +344,10 @@ def is_divisible_by_3(n: int) -> bool:
 ```
 
 ```apl
-is_divisible_by_3←{⍵≥10:∇ sum_of_digits ⍵ ⋄ ⍵∊0 3 6 9}
+is_divisible_by_3←{
+    ⍵≥10:∇ sum_of_digits ⍵
+    ⍵∊0 3 6 9
+}
 ```
 
 Finally, the modulus-free version.
