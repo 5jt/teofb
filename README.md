@@ -60,8 +60,7 @@ fizz
 - [ ] CI/CD through GH Pages
 - [x] chapter 1
 - [x] chapter 2
-- [ ] chapter 3
-- [ ] chapter 4
+- [x] chapter 4
 - [ ] chapter 5
 - [ ] chapter 6
 - [ ] chapter 7
