@@ -19,6 +19,8 @@ nav:
     
 theme:
   favicon: 'img/favicon-32.png'
+  font:
+    code: 'Hack'
   logo: 'img/apl-logo.png'
   features:
     - content.code.copy

@@ -59,7 +59,7 @@ fizz
 - [x] configure Material for MkDocs
 - [ ] CI/CD through GH Pages
 - [x] chapter 1
-- [ ] chapter 2
+- [x] chapter 2
 - [ ] chapter 3
 - [ ] chapter 4
 - [ ] chapter 5
@@ -68,6 +68,7 @@ fizz
 - [ ] chapter 8
 - [ ] chapter 9
 - [ ] chapter 10
+- [ ] [embed font in MkDocs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/): APL386 Unicode, Hack
 - [ ] Install TeX template for Tufte adapted to Vector Sigil page size
 - [ ] Convert MDs to TeX
 - [ ] Shell script to compile PDF
