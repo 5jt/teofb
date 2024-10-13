@@ -25,7 +25,7 @@ We can do this in APL with empty strings.
          '' 'fizz' '' ''
       or←{×≢⍺:⍺ ⋄ ⍕⍵}
 
-      {((⎕IO+15|⍵)⊃CYCLE_OF_15)or ⍵}¨⍳20
+      CYCLE_OF_15∘{((⎕IO+15|⍵)⊃⍺)or ⍵}¨⍳20
 ┌─┬─┬────┬─┬────┬────┬─┬─┬────┬────┬──┬────┬──┬──┬────────┬──┬──┬────┬──┬────┐
 │1│2│fizz│4│buzz│fizz│7│8│fizz│buzz│11│fizz│13│14│fizzbuzz│16│17│fizz│19│buzz│
 └─┴─┴────┴─┴────┴────┴─┴─┴────┴────┴──┴────┴──┴──┴────────┴──┴──┴────┴──┴────┘
@@ -51,14 +51,15 @@ We can rewrite `fizz_buzz` in terms of *equivalence classes* determined by `15|`
  }
 ```
 
-## None as a sentinel
+## `None` as a sentinel
 
-==FIXME==
+In the `CYCLE_OF_15` the Python code used `None` values (non-values?) as ‘sentinels’ to mark where no replacement is to be made.
+The APL code used the empty string `''` for the same purpose.
+
+Anything that `or` recognises as False would do.
 
 
 ## Truthiness and logic
-
-
 
 Truthiness and falsiness are alien to APL but easily to emulate.
 
@@ -134,10 +135,10 @@ The implicit iteration in Find `⍳` and indexing means we do not need to specif
 Not so for `or`.
 
 ```apl
-      DICT_OF_15∘{(⍺ get 15|⍵)or¨⍕¨⍵}⍳20
+      (DICT_OF_15∘get 15|⍳20) or¨ ⍳20
 ┌─┬─┬────┬─┬────┬────┬─┬─┬────┬────┬──┬────┬──┬──┬────────┬──┬──┬────┬──┬────┐
 │1│2│fizz│4│buzz│fizz│7│8│fizz│buzz│11│fizz│13│14│fizzbuzz│16│17│fizz│19│buzz│
 └─┴─┴────┴─┴────┴────┴─┴─┴────┴────┴──┴────┴──┴──┴────────┴──┴──┴────┴──┴────┘
 ```
 
-
+Which looks very similar to the solution using `CYCLE_OF_15`.
