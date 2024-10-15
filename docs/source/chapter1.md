@@ -4,8 +4,8 @@
 
     ```apl
           )CS #.ch1
-          assert←assert      ⍝ local alias
-          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+          assert←#.u.assert      ⍝ local alias
+          FIZZ_BUZZ←#.FIZZ_BUZZ  ⍝ local copy
     ```
 
 APL doesn’t really need a `print` function.

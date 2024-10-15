@@ -4,8 +4,8 @@
 
     ```apl
           )CS #.ch2
-          assert←assert      ⍝ local alias
-          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+          assert←#.u.assert      ⍝ local alias
+          FIZZ_BUZZ←#.FIZZ_BUZZ  ⍝ local copy
     ```
 
 It is easy to translate the “prototypical correct solution”

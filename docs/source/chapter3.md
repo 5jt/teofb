@@ -4,8 +4,8 @@
 
     ```apl
           )CS #.ch3
-          assert←assert      ⍝ local alias
-          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+          assert←#.u.assert      ⍝ local alias
+          FIZZ_BUZZ←#.FIZZ_BUZZ  ⍝ local copy
     ```
 
 Grus indexes an array in this elegant solution.

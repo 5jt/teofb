@@ -4,8 +4,8 @@
 
     ```apl
           )CS #.ch4
-          assert←assert      ⍝ local alias
-          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+          assert←#.u.assert      ⍝ local alias
+          FIZZ_BUZZ←#.FIZZ_BUZZ  ⍝ local copy
     ```
 
 Start by converting Grus’ enigmatic solution
