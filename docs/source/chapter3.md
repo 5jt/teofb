@@ -51,6 +51,40 @@ We can rewrite `fizz_buzz` in terms of *equivalence classes* determined by `15|`
  }
 ```
 
+As a general rule in APL, exploiting implicit iteration is more efficient than specifying a loop with a control strucure or the Each operator `¨`.
+
+So a vector solution would use the iteration implicit in Modulus to determine all the equivalence classes.
+
+```apl
+      +eq←(4 2 1 1/⍳4)[3 6 9 12 5 10 0⍳15|⍳20] ⍝ equivalence classes
+4 4 1 4 2 1 4 4 1 2 4 1 4 4 3 4 4 1 4 2
+      'fizz' 'buzz' 'fizzbuzz' '' [eq]
+┌┬┬────┬┬────┬────┬┬┬────┬────┬┬────┬┬┬────────┬┬┬────┬┬────┐
+│││fizz││buzz│fizz│││fizz│buzz││fizz│││fizzbuzz│││fizz││buzz│
+└┴┴────┴┴────┴────┴┴┴────┴────┴┴────┴┴┴────────┴┴┴────┴┴────┘
+      +i←⍸eq=4 ⍝ where the numbers go
+1 2 4 7 8 11 13 14 16 17 19
+      (⍕¨i)@i⊢'fizz' 'buzz' 'fizzbuzz' '' [eq]
+┌─┬─┬────┬─┬────┬────┬─┬─┬────┬────┬──┬────┬──┬──┬────────┬──┬──┬────┬──┬────┐
+│1│2│fizz│4│buzz│fizz│7│8│fizz│buzz│11│fizz│13│14│fizzbuzz│16│17│fizz│19│buzz│
+└─┴─┴────┴─┴────┴────┴─┴─┴────┴────┴──┴────┴──┴──┴────────┴──┴──┴────┴──┴────┘
+```
+```apl
+fizz_buzz_ec_vec←{
+    ⍝ Fizz Buzz by equivalence class (vector)
+    ⍝ eg fizz_buzz_eq_vec 100
+    eq←(4 2 1 1/⍳4)[3 6 9 12 5 10 0⍳15|⍳⍵]  ⍝ equivalence classes
+    i←⍸eq=4                                 ⍝ where numbers go
+    (⍕¨i)@i⊢'fizz' 'buzz' 'fizzbuzz' ''[eq] ⍝ insert numbers
+}
+```
+```apl
+      assert FIZZ_BUZZ ≡ fizz_buzz_ec_vec 100
+```
+
+
+
+
 ## `None` as a sentinel
 
 In the `CYCLE_OF_15` the Python code used `None` values (non-values?) as ‘sentinels’ to mark where no replacement is to be made.
@@ -142,3 +176,44 @@ Not so for `or`.
 ```
 
 Which looks very similar to the solution using `CYCLE_OF_15`.
+
+
+## No test
+
+The Fizz Buzz problem asks us to produce answers for the first hundred numbers.
+
+The solutions Grus considers involve testing the numbers according to the Fizz Buzz rule and, Python being a scalar language, applying those tests in a loop.
+
+If the problem were to do Fizz Buzz on a number or numbers given as argument, this would be essential. 
+But it’s not. The problem specifies the first hundred natural numbers. We don’t need to test them for anything. 
+
+We know that for the first N natural numbers the Cycle of 15 will simply repeat
+
+```apl
+      N←20
+      N⍴⌽CYCLE_OF_15
+┌┬┬────┬┬────┬────┬┬┬────┬────┬┬────┬┬┬────────┬┬┬────┬┬────┐
+│││fizz││buzz│fizz│││fizz│buzz││fizz│││fizzbuzz│││fizz││buzz│
+└┴┴────┴┴────┴────┴┴┴────┴────┴┴────┴┴┴────────┴┴┴────┴┴────┘
+```
+
+with numbers replacing the empty strings.
+For the first N natural numbers, the numbers are the same as the indices of the empty strings they replace.
+
+```apl
+ fizz_buzz_notest←{
+     x←⍵⍴⌽CYCLE_OF_15  ⍝ extend template
+     i←⍸0=≢¨x          ⍝ find empty strings
+     (⍕¨i)@i⊢x         ⍝ replace with numbers
+ }
+```
+```apl
+      assert FIZZ_BUZZ ≡ fizz_buzz_notest 100
+```
+
+This solution generalises nicely:
+
+-   It already works for values other than 100.
+-   It’s easy to generate cycles for other pairs – or even groups – of numbers.
+-   Apply to a different range of numbers by rotating `x` according to the range start.
+
