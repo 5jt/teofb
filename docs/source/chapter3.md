@@ -1,5 +1,13 @@
 # The cycle of 15
 
+!!! important "In your session"
+
+    ```apl
+          )CS #.ch3
+          assert←assert      ⍝ local alias
+          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+    ```
+
 Grus indexes an array in this elegant solution.
 
 ```python

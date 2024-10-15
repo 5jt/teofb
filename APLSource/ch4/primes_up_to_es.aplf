@@ -1,0 +1,10 @@
+ primes←primes_up_to_es n;c;lmt;p
+⍝ by Sieve of Eratosthenes - no divisions
+ primes←,2
+ c←0@1⊢n⍴1 0        ⍝ candidates: odd numbers 2 < c ≤ n
+ lmt←n*÷2
+ :Repeat
+     primes,←p←c⍳1  ⍝ next prime
+     c∧←n⍴~(-p)↑1   ⍝ remove its multiples
+ :Until p≥lmt       ⍝ candidates have no factors <√n
+ primes,←⍸c

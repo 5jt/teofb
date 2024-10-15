@@ -1,0 +1,7 @@
+ fizz_buzz_ec_vec←{
+    ⍝ Fizz Buzz by equivalence class (vector)
+    ⍝ eg fizz_buzz_eq_vec 100
+     eq←(4 2 1 1/⍳4)[3 6 9 12 5 10 0⍳15|⍳⍵]  ⍝ equivalence classes
+     i←⍸eq=4                                 ⍝ where numbers go
+     (⍕¨i)@i⊢'fizz' 'buzz' 'fizzbuzz' ''[eq] ⍝ insert numbers
+ }

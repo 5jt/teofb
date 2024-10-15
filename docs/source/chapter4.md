@@ -1,5 +1,13 @@
 # Euclid’s solution
 
+!!! important "In your session"
+
+    ```apl
+          )CS #.ch4
+          assert←assert      ⍝ local alias
+          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+    ```
+
 Start by converting Grus’ enigmatic solution
 
 ```python
@@ -173,15 +181,16 @@ Two operations draw my attention. The list `c` of candidates gets redefined in e
 Eratosthenes didn’t use Modulus in his sieve. To remove multiples of (say) 7 from the candidates, he simply struck out every seventh candidate. No Modulus, just counting. Can we do something similar?
 
 ```apl
-∇   primes←primes_up_to n;c;lmt;p
-	primes←,2
-	c←0@1⊢n⍴1 0        ⍝ candidates: odd numbers 2 < c ≤ n
-	lmt←n*÷2
-   :Repeat
-		primes,←p←c⍳1  ⍝ next prime
-		c∧←n⍴~(-p)↑1   ⍝ remove its multiples
-   :Until p≥lmt        ⍝ candidates have no factors <√n
-	primes,←⍸c
+∇ primes←primes_up_to_es n;c;lmt;p
+ ⍝ by Sieve of Eratosthenes - no divisions
+  primes←,2
+  c←0@1⊢n⍴1 0        ⍝ candidates: odd numbers 2 < c ≤ n
+  lmt←n*÷2
+ :Repeat
+      primes,←p←c⍳1  ⍝ next prime
+      c∧←n⍴~(-p)↑1   ⍝ remove its multiples
+ :Until p≥lmt        ⍝ candidates have no factors <√n
+  primes,←⍸c
 ∇
 ```
 

@@ -1,0 +1,6 @@
+ fizz_buzz←{
+    ⍝ Euclid's solution
+     lo hi←{0≥nxt←|/⍵:⍵ ⋄ ∇ nxt,⊃⍵}(15⌊⍵)(15⌈⍵)
+     lo=1:⍕⍵
+     (3 5 15⍳lo)⊃'fizz' 'buzz' 'fizzbuzz'
+ }

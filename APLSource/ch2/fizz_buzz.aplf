@@ -1,0 +1,6 @@
+ fizz_buzz←{
+     0=15|⍵:'fizzbuzz'
+     0=3|⍵:'fizz'
+     0=5|⍵:'buzz'
+     ⍕⍵
+ }

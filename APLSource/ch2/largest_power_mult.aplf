@@ -1,0 +1,4 @@
+ largest_power_mult←{
+  ⍝  largest power of ⍺ that is ≤⍵
+     ⍺ ⍵{d n←⍺ ⋄ n<r←d×⍵:r ⋄ ⍺ ∇ r}1
+ }

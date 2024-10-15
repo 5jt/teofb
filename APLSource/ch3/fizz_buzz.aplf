@@ -1,0 +1,8 @@
+ fizz_buzz←{
+     ec←15|⍵  ⍝ equivalence class
+
+     ec∊3 6 9 12:'fizz'
+     ec∊5 10:'buzz'
+     ec=0:'fizzbuzz'
+     ⍕⍵
+ }

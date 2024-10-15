@@ -1,0 +1,4 @@
+ is_divisible_by_3←{
+     ⍵≥10:∇ sum_of_digits ⍵
+     ⍵∊0 3 6 9
+ }

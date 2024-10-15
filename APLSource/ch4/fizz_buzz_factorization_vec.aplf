@@ -1,0 +1,4 @@
+ fizz_buzz_factorization_vec←{
+     i←2⊥⍉↑3 5∘∊¨factorize¨⍵
+     'buzz' 'fizz' 'fizzbuzz'[i~0]@(⍸×i)⍕¨⍵
+ }

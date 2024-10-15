@@ -1,0 +1,5 @@
+ is_divisible_subtract_fast←{
+    ⍝ whether ⍺ is divisible by ⍵
+     ⍵=1:1
+     0=⍺{⍺<⍵:⍺ ⋄ (⍺ largest_power_subtract_fast ⍵)∇ ⍵}⍵
+ }

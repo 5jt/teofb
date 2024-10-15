@@ -1,0 +1,7 @@
+ fizz_buzz_commented←{
+  ⍝ * The If/ElseIf/Else in d-fn form
+     0=15|⍵:'fizzbuzz'  ⍝ if
+     0=3|⍵:'fizz'       ⍝ elseif
+     0=5|⍵:'buzz'       ⍝ elseif
+     ⍕⍵                 ⍝ else
+ }

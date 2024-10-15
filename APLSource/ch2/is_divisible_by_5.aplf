@@ -1,0 +1,1 @@
+ is_divisible_by_5←{(10⊤⍵)∊0 5}

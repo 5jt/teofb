@@ -1,0 +1,3 @@
+fizz_buzz_factorization←{
+    (1+2⊥3 5∊factorize ⍵)⊃(⊂⍕⍵),'buzz' 'fizz' 'fizzbuzz'
+}

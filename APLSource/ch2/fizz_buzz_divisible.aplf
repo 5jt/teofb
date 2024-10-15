@@ -1,0 +1,9 @@
+ fizz_buzz_divisible←{
+     by3←is_divisible_by_3 ⍵
+     by5←is_divisible_by_5 ⍵
+
+     by3∧by5:'fizzbuzz'
+     by3:'fizz'
+     by5:'buzz'
+     ⍕⍵
+ }

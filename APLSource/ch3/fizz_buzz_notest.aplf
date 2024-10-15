@@ -1,0 +1,5 @@
+ fizz_buzz_notest←{
+     x←⍵⍴⌽CYCLE_OF_15  ⍝ extend template
+     i←⍸0=≢¨x          ⍝ find empty strings
+     (⍕¨i)@i⊢x         ⍝ replace with numbers
+ }

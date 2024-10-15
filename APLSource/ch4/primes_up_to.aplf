@@ -1,0 +1,6 @@
+ primes←primes_up_to n;c;p
+ primes←0⍴c←1↓⍳n       ⍝ candidates
+ :While ×≢c
+     primes,←p←⊃c      ⍝ next prime
+     c←c/⍨×p|c         ⍝ remove multiples
+ :EndWhile

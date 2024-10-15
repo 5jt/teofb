@@ -1,0 +1,8 @@
+ print s
+ :If 1=≡s            ⍝ string
+     ⎕←s
+ :ElseIf 2=≡s        ⍝ list of strings
+     ⎕←,[1.5]s
+ :Else
+     ⎕SIGNAL 11      ⍝ domain error
+ :EndIf

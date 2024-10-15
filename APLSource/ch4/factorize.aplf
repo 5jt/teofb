@@ -1,0 +1,13 @@
+ factors←factorize n;primes;p
+ primes←primes_up_to n
+ factors←⍬
+
+ :For p :In primes
+     :While 0=p|n
+         factors,←p  ⍝ got one
+         n←⌊n÷p      ⍝ residue to factorise
+     :EndWhile
+     :If n=1         ⍝ no more factors to find
+         :Leave
+     :EndIf
+ :EndFor

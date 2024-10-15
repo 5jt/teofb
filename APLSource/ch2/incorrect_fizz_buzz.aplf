@@ -1,0 +1,6 @@
+ incorrect_fizz_buzz←{
+     0=3|⍵:'fizz'
+     0=5|⍵:'buzz'
+     0=15|⍵:'fizzbuzz'
+     ⍕⍵
+ }

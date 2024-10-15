@@ -1,0 +1,6 @@
+ power←d largest_power_trad n
+ #.u.assert(1<d)∧d≤n
+ power←d
+ :While n>d×power
+     power×←d
+ :EndWhile

@@ -1,5 +1,13 @@
 # if / elif/ elif / else
 
+!!! important "In your session"
+
+    ```apl
+          )CS #.ch2
+          assert←assert      ⍝ local alias
+          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+    ```
+
 It is easy to translate the “prototypical correct solution”
 
 ```python
@@ -430,8 +438,5 @@ Or, returning, as Grus does, to Modulus to test divisibility:
 
 ```apl
       fb←{(0⍳⍨15 5 3|⍵)⊃'fizzbuzz' 'buzz' 'fizz',⊂⍕⍵}  ⍝ Fizz Buzz
-      fb¨⍳20
-┌─┬─┬────┬─┬────┬────┬─┬─┬────┬────┬──┬────┬──┬──┬────────┬──┬──┬────┬──┬────┐
-│1│2│fizz│4│buzz│fizz│7│8│fizz│buzz│11│fizz│13│14│fizzbuzz│16│17│fizz│19│buzz│
-└─┴─┴────┴─┴────┴────┴─┴─┴────┴────┴──┴────┴──┴──┴────────┴──┴──┴────┴──┴────┘
+      assert FIZZ_BUZZ ≡ fb¨⍳100
 ```

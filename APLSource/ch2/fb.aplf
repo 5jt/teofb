@@ -1,0 +1,1 @@
+ fb←{(0⍳⍨15 5 3|⍵)⊃'fizzbuzz' 'buzz' 'fizz',⊂⍕⍵}

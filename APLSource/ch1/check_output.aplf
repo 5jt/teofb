@@ -1,0 +1,15 @@
+ check_output output;i;errors
+ assert=/≢¨output #.FIZZ_BUZZ
+
+⍝  errors←''
+⍝ :For i :In ≢output
+⍝     :If output[i]≢#.FIZZ_BUZZ[i]
+⍝         errors,←⊂(⍕i),' predicted: ',(i⊃#.FIZZ_BUZZ),', actual: ',i⊃output
+⍝     :EndIf
+⍝ :EndFor
+
+⍝ assert 0=≢errors
+
+ i←⍸output≢¨#.FIZZ_BUZZ
+ errors←(⍕¨i),¨(⊂' predicted: '),¨#.FIZZ_BUZZ[i],¨(⊂', actual: '),¨output[i]
+ assert 0=≢i

@@ -1,0 +1,3 @@
+ check_function fizzbuzz
+⍝ e.g. check_function '#.ch2.A'
+ check_output⍎fizzbuzz,'¨⍳100'

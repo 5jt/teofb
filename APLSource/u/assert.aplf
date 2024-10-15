@@ -1,0 +1,1 @@
+ assert←{'ASSERTION FAILED'⎕SIGNAL 666/⍨~⍵}

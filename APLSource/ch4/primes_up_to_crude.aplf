@@ -1,0 +1,1 @@
+ primes_up_to_crude←{c/⍨is_prime2¨c←1↓⍳⍵}

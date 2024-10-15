@@ -1,5 +1,13 @@
 # 100 print statements
 
+!!! important "In your session"
+
+    ```apl
+          )CS #.ch1
+          assert←assert      ⍝ local alias
+          FIZZ_BUZZ←FIZZ_BUZZ  ⍝ local copy
+    ```
+
 APL doesn’t really need a `print` function.
 It prints result of an evaluation to the session by default. 
 
