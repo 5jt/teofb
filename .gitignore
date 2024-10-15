@@ -2,5 +2,6 @@
 
 *.sublime-*
 **/*.dws
+APLSauce/
 
 fizzbuzz.txt

@@ -1,5 +1,0 @@
-fbcycle←{
-    r←(≢⍵)⍴⊃fbc/⍺    ⍝ replacements or ''s
-	i←⍸nb←×≢¨r       ⍝ non-blank replacements
-	(nb/r)@(i)⍕¨⍵
-}

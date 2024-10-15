@@ -1,7 +1,0 @@
- assert bool
- ⍝ e.g assert 4=2+2
- :If 0≠≢⍴bool
- :OrIf ~bool∊0 1
-     'Asserted expression must evaluate to 0 or 1'⎕SIGNAL 11
- :EndIf
- 'ASSERTION FAILED' ⎕SIGNAL(~bool)/666

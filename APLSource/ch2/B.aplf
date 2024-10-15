@@ -1,4 +1,0 @@
- Z←B
- ⍝ The canonical Python solution with
- ⍝ * the For-loop replaced by Each
- Z←B∆¨⍳#.N

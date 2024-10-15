@@ -1,3 +1,0 @@
- Z←C
- ⍝ order_free_fizz_buzz
- Z←C∆¨⍳#.N

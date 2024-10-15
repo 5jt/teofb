@@ -1,3 +1,0 @@
- Z←A
- ⍝ iterate the canonical Python solution
- Z←A∆¨⍳#.N
